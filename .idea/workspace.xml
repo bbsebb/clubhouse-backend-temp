@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2a3eb78-8388-4f13-990e-8cd5b2539144" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/model/PhoneNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/domain/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/domain/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/model/Coach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/domain/Contributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/model/Contributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/domain/PhoneNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/domain/TeamColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/model/TeamColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/domain/TeamsColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/model/TeamsColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/model/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-domain/src/main/java/fr/hoenheimsports/model/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game-domain/src/test/java/fr/hoenheimsports/model/TeamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/game-domain/src/test/java/fr/hoenheimsports/model/TeamTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +28,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Record" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -73,7 +67,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/Users/bbseb/programmation/gestion-club-archive/java-gestion-club",
+    "last_opened_file_path": "/home/bbsebb/Programmation/gestion_club/gestion-club/clubhouse-backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +87,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="fr.hoenheimsports.model.builder" />
       <recent name="fr.hoenheimsports.model" />
     </key>
   </component>
@@ -144,6 +139,7 @@
       <workItem from="1686418381179" duration="1190000" />
       <workItem from="1686430056250" duration="1762000" />
       <workItem from="1686439077936" duration="6668000" />
+      <workItem from="1686496766451" duration="9243000" />
     </task>
     <servers />
   </component>
