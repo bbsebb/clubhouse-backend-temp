@@ -1,4 +1,4 @@
-package fr.hoenheimsports.domain;
+package fr.hoenheimsports.model;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;

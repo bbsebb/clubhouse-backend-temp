@@ -1,4 +1,4 @@
-package fr.hoenheimsports.domain;
+package fr.hoenheimsports.model;
 
 public interface Contributor {
 }
