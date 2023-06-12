@@ -5,9 +5,8 @@ import fr.hoenheimsports.model.Pool;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.UUID;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CompetitionBuilderTest {
 
@@ -16,6 +15,7 @@ class CompetitionBuilderTest {
         UUID id = UUID.randomUUID();
         String name = "Competition";
         Pool pool = Pool.UNKNOWN;
+        List<Pool> pools = List.of(pool);
 
         Competition competition = new CompetitionBuilder()
                 .withId(id)
@@ -25,13 +25,14 @@ class CompetitionBuilderTest {
 
         Assertions.assertEquals(id, competition.id());
         Assertions.assertEquals(name, competition.name());
-        Assertions.assertEquals(pool, competition.pool());
+        Assertions.assertEquals(pools, competition.pools());
     }
 
     @Test
     public void testBuildWithoutId() {
         String name = "Competition";
         Pool pool = Pool.UNKNOWN;
+        List<Pool> pools = List.of(pool);
 
         Competition competition = new CompetitionBuilder()
                 .withName(name)
@@ -40,7 +41,7 @@ class CompetitionBuilderTest {
 
         Assertions.assertNotNull(competition.id());
         Assertions.assertEquals(name, competition.name());
-        Assertions.assertEquals(pool, competition.pool());
+        Assertions.assertEquals(pools, competition.pools());
     }
 
     @Test
@@ -60,7 +61,7 @@ class CompetitionBuilderTest {
 
         Assertions.assertEquals(id, competition.id());
         Assertions.assertEquals(name, competition.name());
-        Assertions.assertEquals(poolNumber, competition.pool().number());
-        Assertions.assertEquals(poolName, competition.pool().name());
+        Assertions.assertEquals(poolNumber, competition.pools().get(0).number());
+        Assertions.assertEquals(poolName, competition.pools().get(0).name());
     }
 }

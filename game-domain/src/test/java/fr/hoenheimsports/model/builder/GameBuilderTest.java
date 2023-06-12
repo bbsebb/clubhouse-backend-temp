@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,10 +22,10 @@ class GameBuilderTest {
                 new Competition(
                         UUID.randomUUID(),
                         "Competition1",
-                        new Pool(
+                        List.of(new Pool(
                                 "Pool1",
                                 "Pool1"
-                        )
+                        ))
                 ),
                 new Day(1),
                 new Halle(
@@ -249,8 +250,8 @@ class GameBuilderTest {
         assertEquals("game123", game.code());
         assertEquals(competitionId, game.competition().id());
         assertEquals(competitionName, game.competition().name());
-        assertEquals(poolNumber, game.competition().pool().number());
-        assertEquals(poolName, game.competition().pool().name());
+        assertEquals(poolNumber, game.competition().pools().get(0).number());
+        assertEquals(poolName, game.competition().pools().get(0).name());
         assertEquals(dayNumber, game.day().number());
         assertEquals(halleId, game.halle().id());
         assertEquals(halleName, game.halle().name());
