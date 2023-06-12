@@ -11,7 +11,7 @@ public record Game(
         Halle halle,
         Referees referees,
         Team homeTeam,
-        Team VisitingTeam,
+        Team visitingTeam,
         Score score,
         FDME fdme,
         LocalDateTime dateTime
@@ -23,7 +23,7 @@ public record Game(
         Objects.requireNonNull(halle, "halle should not be null");
         Objects.requireNonNull(referees, "referees should not be null");
         Objects.requireNonNull(homeTeam, "homeTeam should not be null");
-        Objects.requireNonNull(VisitingTeam, "VisitingTeam should not be null");
+        Objects.requireNonNull(visitingTeam, "visitingTeam should not be null");
         Objects.requireNonNullElse(score, Score.DEFAULT);
         Objects.requireNonNull(fdme, "fdme should not be null");
         Objects.requireNonNull(dateTime, "dateTime should not be null");
