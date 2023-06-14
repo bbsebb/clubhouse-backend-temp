@@ -9,14 +9,10 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 public class CompetitionBuilder {
-    private UUID id;
+
     private String name;
     private List<Pool> pools = new ArrayList<>();
 
-    public CompetitionBuilder withId(UUID id) {
-        this.id = id;
-        return this;
-    }
 
     public CompetitionBuilder withName(String name) {
         this.name = name;
@@ -36,9 +32,6 @@ public class CompetitionBuilder {
     }
 
     public Competition build() {
-        if (id == null) {
-            id = UUID.randomUUID();
-        }
-        return new Competition(id, name, pools);
+        return new Competition(name, pools);
     }
 }

@@ -8,13 +8,13 @@ public final class Game {
     private final String code;
     private final Competition competition;
     private final Day day;
-    private final Halle halle;
-    private final Referees referees;
+    private Halle halle;
+    private Referees referees;
     private final Team homeTeam;
     private final Team visitingTeam;
-    private final Score score;
-    private final FDME fdme;
-    private final LocalDateTime dateTime;
+    private Score score;
+    private FDME fdme;
+    private LocalDateTime dateTime;
 
     public Game(String code, Competition competition, Day day, Halle halle, Referees referees, Team homeTeam, Team visitingTeam, Score score, FDME fdme, LocalDateTime dateTime) {
         Objects.requireNonNull(code, "code should not be null");
@@ -77,6 +77,26 @@ public final class Game {
 
     public LocalDateTime dateTime() {
         return dateTime;
+    }
+
+    public void setHalle(Halle halle) {
+        this.halle = halle;
+    }
+
+    public void setReferees(Referees referees) {
+        this.referees = referees;
+    }
+
+    public void setScore(Score score) {
+        this.score = score;
+    }
+
+    public void setFdme(FDME fdme) {
+        this.fdme = fdme;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 
     @Override

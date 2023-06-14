@@ -5,13 +5,9 @@ import fr.hoenheimsports.model.Category;
 import java.util.UUID;
 
 public class CategoryBuilder {
-    private UUID id;
+
     private String name;
 
-    public CategoryBuilder withId(UUID id) {
-        this.id = id;
-        return this;
-    }
 
     public CategoryBuilder withName(String name) {
         this.name = name;
@@ -19,9 +15,7 @@ public class CategoryBuilder {
     }
 
     public Category build() {
-        if (id == null) {
-            id = UUID.randomUUID();
-        }
-        return new Category(id, name);
+
+        return new Category(name);
     }
 }

@@ -20,7 +20,6 @@ class GameBuilderTest {
         Game gameExcepted = new Game(
                 "game123",
                 new Competition(
-                        UUID.randomUUID(),
                         "Competition1",
                         List.of(new Pool(
                                 "Pool1",
@@ -42,7 +41,7 @@ class GameBuilderTest {
                 ),
                 new Team(
                         UUID.randomUUID(),
-                        new Category(UUID.randomUUID(), "Category1"),
+                        new Category("Category1"),
                         Gender.MALE,
                         1,
                         new Club("Club1", "ClubName1"),
@@ -52,7 +51,7 @@ class GameBuilderTest {
                 ),
                 new Team(
                         UUID.randomUUID(),
-                        new Category(UUID.randomUUID(), "Category2"),
+                        new Category("Category2"),
                         Gender.FEMALE,
                         5,
                         new Club("Club2", "ClubName2"),
@@ -150,7 +149,6 @@ class GameBuilderTest {
         Game game = new GameBuilder()
                 .withCode("game123")
                 .withCompetition(competitionBuilder -> {
-                    competitionBuilder.withId(competitionId);
                     competitionBuilder.withName(competitionName);
                     competitionBuilder.withPool(poolBuilder -> {
                         poolBuilder.withNumber(poolNumber);
@@ -193,7 +191,6 @@ class GameBuilderTest {
                 .withHomeTeam(teamBuilder -> {
                     teamBuilder.withId(homeTeamId);
                     teamBuilder.withCategory(categoryBuilder -> {
-                        categoryBuilder.withId(homeCategoryId);
                         categoryBuilder.withName(homeCategoryName);
                     });
                     teamBuilder.withGender(homeGender);
@@ -217,7 +214,6 @@ class GameBuilderTest {
                 .withVisitingTeam(teamBuilder -> {
                     teamBuilder.withId(visitingTeamId);
                     teamBuilder.withCategory(categoryBuilder -> {
-                        categoryBuilder.withId(visitingCategoryId);
                         categoryBuilder.withName(visitingCategoryName);
                     });
                     teamBuilder.withGender(visitingGender);
@@ -248,7 +244,6 @@ class GameBuilderTest {
 
         // Assertions to validate the game object
         assertEquals("game123", game.code());
-        assertEquals(competitionId, game.competition().id());
         assertEquals(competitionName, game.competition().name());
         assertEquals(poolNumber, game.competition().pools().get(0).number());
         assertEquals(poolName, game.competition().pools().get(0).name());
@@ -272,7 +267,6 @@ class GameBuilderTest {
         assertEquals(referee4Name, game.referees().officiatingReferee2().name());
         assertEquals(referee4PhoneNumber, game.referees().officiatingReferee2().phoneNumber().phoneNumber());
         assertEquals(homeTeamId, game.homeTeam().id());
-        assertEquals(homeCategoryId, game.homeTeam().category().id());
         assertEquals(homeCategoryName, game.homeTeam().category().name());
         assertEquals(homeGender, game.homeTeam().gender());
         assertEquals(homeNumber, game.homeTeam().number());
@@ -286,7 +280,6 @@ class GameBuilderTest {
         assertEquals(homeCoachName, game.homeTeam().coach().name());
         assertEquals(homeCoachPhoneNumber, game.homeTeam().coach().phoneNumber().phoneNumber());
         assertEquals(visitingTeamId, game.visitingTeam().id());
-        assertEquals(visitingCategoryId, game.visitingTeam().category().id());
         assertEquals(visitingCategoryName, game.visitingTeam().category().name());
         assertEquals(visitingGender, game.visitingTeam().gender());
         assertEquals(visitingNumber, game.visitingTeam().number());

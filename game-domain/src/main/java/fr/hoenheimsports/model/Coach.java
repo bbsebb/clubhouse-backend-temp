@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public record Coach(UUID id, String name, PhoneNumber phoneNumber) implements Contributor{
 
-    public static final Coach UNKNOWN = new Coach(UUID.randomUUID(),"unknown",new PhoneNumber("00"));
+    public static final Coach UNKNOWN = new Coach(UUID.fromString("00000000-0000-0000-0000-000000000000"),"unknown",new PhoneNumber("00"));
 
     public Coach {
         Objects.requireNonNull(id, "id should not be null");
